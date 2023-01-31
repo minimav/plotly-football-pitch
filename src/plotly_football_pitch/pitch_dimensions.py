@@ -6,8 +6,11 @@ from dataclasses import dataclass
 class PitchDimensions:
     """Dimensions for a horizontal football pitch plot.
 
-    Length refers to the longer pitch dimension, the plot's x-axis.
-    Width refers to the shorter pitch dimension, the plot's y-axis.
+    All units are in metres. Length refers to the longer pitch dimension, which
+    will be the plot's x-axis. Width refers to the shorter pitch dimension,
+    which will be the plot's y-axis. The origin is the bottom left hand corner
+    of the pitch.
+
     """
 
     pitch_width_metres: int = 68
@@ -15,7 +18,7 @@ class PitchDimensions:
 
     @property
     def pitch_mid_length_metres(self):
-        """Distance of the centre line in metres from goallines."""
+        """Distance of the centre line in metres from goal lines."""
         return self.pitch_length_metres / 2
 
     @property
