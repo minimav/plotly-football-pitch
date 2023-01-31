@@ -1,9 +1,0 @@
-plotly
-plotly_express
-typing_extensions
-
-[dev]
-jupyter
-numpy
-pre-commit
-pytest

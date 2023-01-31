@@ -2,3 +2,5 @@
 __pycache__
 .DS_Store
 build
+dist
+src/plotly_football_pitch.egg-info/*
