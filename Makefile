@@ -27,3 +27,11 @@ test: install  ## Run unit tests against installed version of the package
 
 test-local:  ## Run unit tests against local files
 	python -m pytest  -vv tests
+
+build:  ## Build the package as tar.gz and wheel files
+	python -m pip install setuptools wheel build
+	python -m build .
+
+test-pypi:  ## Push a build to test PyPI
+    python -m pip install twine
+	python -m twine upload --repository testpypi dist/*

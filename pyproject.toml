@@ -27,6 +27,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
+    "build",
     "jupyter",
     "numpy",
     "pre-commit",
