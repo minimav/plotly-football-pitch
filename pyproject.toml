@@ -29,6 +29,7 @@ dependencies = [
 dev = [
     "build",
     "jupyter",
+    "kaleido",
     "numpy",
     "pre-commit",
     "pytest",
