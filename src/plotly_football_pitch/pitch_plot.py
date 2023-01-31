@@ -1,6 +1,10 @@
 """Create a plotly figure of a football pitch."""
 from typing import Optional
-from typing_extensions import TypeAlias
+
+try:
+    from typing import TypeAlias  # type:ignore
+except ImportError:
+    from typing_extensions import TypeAlias
 
 import numpy as np
 import plotly
@@ -8,7 +12,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-from dimensions import PitchDimensions
+from plotly_football_pitch.pitch_dimensions import PitchDimensions
 
 
 PlotlyFigure: TypeAlias = plotly.graph_objs._figure.Figure

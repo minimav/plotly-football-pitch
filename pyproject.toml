@@ -1,0 +1,43 @@
+[project]
+name = "plotly_football_pitch"
+version = "0.0.1"
+description = "Package to allow creation of football pitch charts using plotly"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE.txt"}
+keywords = ["soccer", "football", "plotly"]
+authors = [{name = "Andrew Davies"}]
+maintainers = [{name = "Andrew Davies"}]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: The Unlicense (Unlicense)",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3 :: Only",
+]
+dependencies = [
+  "plotly",
+  "plotly_express",
+  "typing_extensions",
+]
+
+[project.optional-dependencies]
+dev = [
+    "jupyter",
+    "numpy",
+    "pre-commit",
+    "pytest",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/minimav/plotly-football-pitch"
+"Bug Reports" = "https://github.com/minimav/plotly-football-pitch/issues"
+"Source" = "https://github.com/minimav/plotly-football-pitch"
+
+[build-system]
+requires = ["setuptools>=43.0.0", "wheel"]
+build-backend = "setuptools.build_meta"

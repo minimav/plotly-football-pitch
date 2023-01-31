@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/plotly_football_pitch/__init__.py
+src/plotly_football_pitch/pitch_dimensions.py
+src/plotly_football_pitch/pitch_plot.py
+src/plotly_football_pitch.egg-info/PKG-INFO
+src/plotly_football_pitch.egg-info/SOURCES.txt
+src/plotly_football_pitch.egg-info/dependency_links.txt
+src/plotly_football_pitch.egg-info/requires.txt
+src/plotly_football_pitch.egg-info/top_level.txt
