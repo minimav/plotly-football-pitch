@@ -5,6 +5,8 @@ corner of the pitch.
 
 ## Examples
 
+Further examples can be found in `examples/pitch.ipynb`.
+
 ```python
 from plotly_football_pitch import make_pitch_figure, PitchDimensions
 
@@ -17,11 +19,18 @@ fig.show()
 ![basic pitch](images/basic_pitch.png)
 
 ```python
-from plotly_football_pitch import make_pitch_figure, PitchDimensions
+from plotly_football_pitch import (
+    make_pitch_figure,
+    PitchDimensions,
+    SingleColourBackground
+)
 
 
 dimensions = PitchDimensions()
-fig = make_pitch_figure(dimensions, pitch_colour="#81B622")
+fig = make_pitch_figure(
+    dimensions,
+    pitch_background=SingleColourBackground("#81B622"),
+)
 fig.show()
 ```
 
