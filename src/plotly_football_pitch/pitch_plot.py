@@ -6,6 +6,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
+from plotly_football_pitch.pitch_background import PitchBackground
 from plotly_football_pitch.pitch_dimensions import PitchDimensions
 
 
@@ -42,7 +43,7 @@ def make_ellipse_arc_svg_path(
         closed (bool): Whether the arc should be closed, default False.
 
     Returns:
-        plotly.graph_objs._figure.Figure
+        plotly.graph_objects.Figure
 
     .. _Plotly forums
        https://community.plotly.com/t/arc-shape-with-path/7205/4
@@ -61,7 +62,7 @@ def make_pitch_figure(
     dimensions: PitchDimensions,
     marking_colour: str = "black",
     marking_width: int = 4,
-    pitch_colour: Optional[str] = None,
+    pitch_background: Optional[PitchBackground] = None,
     figure_width_pixels: int = 800,
     figure_height_pixels: int = 600,
 ) -> go.Figure:
@@ -71,15 +72,16 @@ def make_pitch_figure(
         dimensions (PitchDimensions): Dimensions of the pitch to plot.
         marking_colour (str): Colour of the pitch markings, default "black".
         marking_width (int): Width of the pitch markings, default 4.
-        pitch_colour (Optional[str]): Background colour of the pitch. The
-            default None results in a transparent background.
+        pitch_background (Optional[PitchBackground]): Strategy for plotting a
+            background colour to the pitch. The default of None results in a
+            transparent background.
         figure_width_pixels (int): Width of the figure, default 800. This
             corresponds to the long axis of the pitch (pitch length).
         figure_height_pixels (int): Height of the figure, default 600. This
             corresponds to the short axis of the pitch (pitch width).
 
     Returns:
-        plotly.graph_objs._figure.Figure
+        plotly.graph_objects.Figure
     """
     pitch_marking_style = {
         "mode": "lines",
@@ -231,12 +233,9 @@ def make_pitch_figure(
         path=path,
         line=pitch_marking_style["line"],
     )
-    fig.add_hrect(
-        y0=0,
-        y1=dimensions.pitch_width_metres,
-        fillcolor=pitch_colour,
-        layer="below",
-    )
+
+    if pitch_background is not None:
+        fig = pitch_background.add_background(fig, dimensions)
 
     fig.update_layout(
         height=figure_height_pixels,
@@ -254,7 +253,7 @@ def add_heatmap(fig: go.Figure, data: np.ndarray) -> go.Figure:
     """Add a heatmap to an existing figure.
 
     Args:
-        fig (plotly.graph_objs._figure.Figure): Figure on which to add heatmap.
+        fig (plotly.graph_objects.Figure): Figure on which to add heatmap.
             Expected to have axis ranges directly set so that
             `fig.layout.xaxis.range` and `fig.layout.yaxis.range` are not None.
         data (np.ndarray):
@@ -263,7 +262,7 @@ def add_heatmap(fig: go.Figure, data: np.ndarray) -> go.Figure:
             this array.
 
     Returns:
-        plotly.graph_objs._figure.Figure
+        plotly.graph_objects.Figure
     """
     _, pitch_length_metres = fig.layout.xaxis.range
     _, pitch_width_metres = fig.layout.yaxis.range
