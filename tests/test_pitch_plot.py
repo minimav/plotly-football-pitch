@@ -8,6 +8,13 @@ from plotly_football_pitch import (
     make_pitch_figure,
     PitchDimensions,
 )
+from plotly_football_pitch.pitch_background import (
+    AttackVsDefenceBackground,
+    ChequeredBackground,
+    HorizontalStripesBackground,
+    SingleColourBackground,
+    VerticalStripesBackground,
+)
 
 
 def test_number_of_pitch_markings():
@@ -19,11 +26,11 @@ def test_number_of_pitch_markings():
       * 2x 6-yard box
       * 2x 18-yard box
       * 2x penalty spots
+      * centre spot
 
-    These 4 non-linear markings/points are added to the layout's shapes
+    These 3 non-linear markings are added to the layout's shapes
     attribute:
       * centre circle
-      * centre spot
       * 2x penalty box arcs
     """
     dimensions = PitchDimensions()
@@ -33,7 +40,7 @@ def test_number_of_pitch_markings():
     assert len(fig.data) == 9
 
     # curved markings
-    assert len(fig.layout.shapes) == 4
+    assert len(fig.layout.shapes) == 3
 
 
 @pytest.mark.parametrize(
@@ -54,7 +61,7 @@ def test_different_pitch_dimensions(pitch_width_metres, pitch_length_metres):
     "width_grid, length_grid", [(10, 10), (5, 12), (4, 6), (15, 12)]
 )
 def test_adding_heat_maps(width_grid, length_grid):
-    """Heatmaps of different grid sizes can be added successfully"""
+    """Heatmaps of different grid sizes can be added successfully."""
     dimensions = PitchDimensions()
     fig = make_pitch_figure(dimensions)
     num_data_on_plot = len(fig.data)
@@ -66,3 +73,36 @@ def test_adding_heat_maps(width_grid, length_grid):
     fig = add_heatmap(fig, data)
 
     assert len(fig.data) == num_data_on_plot + 1
+
+
+@pytest.mark.parametrize(
+    "pitch_background_cls, kwargs",
+    [
+        (
+            AttackVsDefenceBackground,
+            {"attack_colour": "#425AFE", "defence_colour": "blue"},
+        ),
+        (
+            ChequeredBackground,
+            {
+                "colours": ["blue", "#FFAAFF"],
+                "num_horizontal_stripes": 4,
+                "num_vertical_stripes": 3,
+            },
+        ),
+        (
+            HorizontalStripesBackground,
+            {"colours": ["#425AFE", "#F22F34"], "num_stripes": 12},
+        ),
+        (SingleColourBackground, {"colour": "green"}),
+        (
+            VerticalStripesBackground,
+            {"colours": ["black", "grey", "orange"], "num_stripes": 10},
+        ),
+    ],
+)
+def test_adding_pitch_backgrounds(pitch_background_cls, kwargs):
+    """Different backgrounds can be added successfully."""
+    dimensions = PitchDimensions()
+    pitch_background = pitch_background_cls(**kwargs)
+    make_pitch_figure(dimensions, pitch_background=pitch_background)
