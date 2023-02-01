@@ -87,11 +87,13 @@ def make_pitch_figure(
         "mode": "lines",
         "line": {"color": marking_colour, "width": marking_width},
         "hoverinfo": "skip",
+        "showlegend": False,
     }
     spot_style = {
         "mode": "markers",
-        "line": {"color": marking_colour, "width": marking_width},
+        "line": {"color": marking_colour},
         "hoverinfo": "skip",
+        "showlegend": False,
     }
 
     pitch_markings = [
@@ -202,6 +204,7 @@ def make_pitch_figure(
         x1=dimensions.pitch_mid_length_metres - dimensions.centre_circle_radius_metres,
         y1=dimensions.pitch_mid_width_metres - dimensions.centre_circle_radius_metres,
         line=pitch_marking_style["line"],
+        name=None,
     )
 
     # penalty box arcs
@@ -218,6 +221,7 @@ def make_pitch_figure(
         type="path",
         path=path,
         line=pitch_marking_style["line"],
+        name=None,
     )
     path = make_ellipse_arc_svg_path(
         x_centre=dimensions.pitch_length_metres - dimensions.penalty_spot_length_metres,
@@ -232,6 +236,7 @@ def make_pitch_figure(
         type="path",
         path=path,
         line=pitch_marking_style["line"],
+        name=None,
     )
 
     if pitch_background is not None:
@@ -243,13 +248,12 @@ def make_pitch_figure(
         xaxis_range=[0, dimensions.pitch_length_metres],
         yaxis_range=[0, dimensions.pitch_width_metres],
     )
-    fig.update_layout(showlegend=False)
     fig.update_xaxes(visible=False)
     fig.update_yaxes(visible=False)
     return fig
 
 
-def add_heatmap(fig: go.Figure, data: np.ndarray) -> go.Figure:
+def add_heatmap(fig: go.Figure, data: np.ndarray, **kwargs) -> go.Figure:
     """Add a heatmap to an existing figure.
 
     Args:
@@ -259,24 +263,25 @@ def add_heatmap(fig: go.Figure, data: np.ndarray) -> go.Figure:
         data (np.ndarray):
             2-dimensional arrays of values to plot on the figure. Number of
             grid squares in each dimension will be inferred from the shape of
-            this array.
+            this array. The i'th row of the array corresponds to the i'th row
+            of the grid on the pitch starting from the bottom, while the j'th
+            column of the array corresponds to the j'th column of the grid
+            starting from the left hand side. Thus, in particular, `data[0, 0]`
+            corresponds to the bottom left grid square.
 
     Returns:
         plotly.graph_objects.Figure
     """
+    if "colorscale" not in kwargs:
+        kwargs["colorscale"] = px.colors.sequential.Reds
+    if "hovertemplate" not in kwargs:
+        kwargs["hovertemplate"] = "%{z}<extra></extra>"
+
     _, pitch_length_metres = fig.layout.xaxis.range
     _, pitch_width_metres = fig.layout.yaxis.range
 
     dx = pitch_length_metres / data.shape[1]
     dy = pitch_width_metres / data.shape[0]
-    heatmap = go.Heatmap(
-        z=data,
-        dx=dx,
-        dy=dy,
-        y0=dy / 2,
-        x0=dx / 2,
-        colorscale=px.colors.sequential.Reds,
-        hovertemplate="%{z}<extra></extra>",
-    )
+    heatmap = go.Heatmap(z=data, dx=dx, dy=dy, y0=dy / 2, x0=dx / 2, **kwargs)
     fig.add_trace(heatmap)
     return fig

@@ -1,6 +1,7 @@
 import random
 
 import numpy as np
+import plotly_express as px
 import pytest
 
 from plotly_football_pitch import (
@@ -106,3 +107,25 @@ def test_adding_pitch_backgrounds(pitch_background_cls, kwargs):
     dimensions = PitchDimensions()
     pitch_background = pitch_background_cls(**kwargs)
     make_pitch_figure(dimensions, pitch_background=pitch_background)
+
+
+def test_adding_heat_maps_with_kwargs():
+    """Heatmaps can accept kwargs."""
+    dimensions = PitchDimensions()
+    fig = make_pitch_figure(dimensions)
+    data = np.arange(15).reshape(5, 3)
+    kwargs = {
+        "colorscale": px.colors.sequential.Blues,
+        "hovertemplate": "custom template: %{z}",
+    }
+    add_heatmap(fig, data, **kwargs)
+
+
+def test_adding_heat_maps_with_unexpected_kwargs_raises_error():
+    """Adding heatmaps will error on unexpected kwargs."""
+    dimensions = PitchDimensions()
+    fig = make_pitch_figure(dimensions)
+    data = np.arange(15).reshape(5, 3)
+    kwargs = {"unexpected": 0}
+    with pytest.raises(ValueError, match="unexpected"):
+        add_heatmap(fig, data, **kwargs)
