@@ -18,7 +18,7 @@ fig = make_pitch_figure(dimensions)
 fig.show()
 ```
 
-![basic pitch](images/basic_pitch.png)
+![basic pitch](https://github.com/minimav/plotly-football-pitch/blob/main/images/basic_pitch.png?raw=True)
 
 ```python
 from plotly_football_pitch import (
@@ -36,7 +36,7 @@ fig = make_pitch_figure(
 fig.show()
 ```
 
-![green pitch](images/green_pitch.png)
+![green pitch](https://github.com/minimav/plotly-football-pitch/blob/main/images/green_pitch.png?raw=True)
 
 ```python
 import numpy as np
@@ -60,7 +60,7 @@ fig = add_heatmap(fig, data)
 fig.show()
 ```
 
-![basic pitch with heatmp](images/basic_pitch_with_heatmap.png)
+![basic pitch with heatmap](https://github.com/minimav/plotly-football-pitch/blob/main/images/basic_pitch_with_heatmap.png?raw=True)
 
 ## Installation
 
