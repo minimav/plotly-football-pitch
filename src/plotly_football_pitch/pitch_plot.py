@@ -1,21 +1,12 @@
 """Create a plotly figure of a football pitch."""
 from typing import Optional
 
-try:
-    from typing import TypeAlias  # type:ignore
-except ImportError:
-    from typing_extensions import TypeAlias
-
 import numpy as np
-import plotly
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 from plotly_football_pitch.pitch_dimensions import PitchDimensions
-
-
-PlotlyFigure: TypeAlias = plotly.graph_objs._figure.Figure
 
 
 def make_ellipse_arc_svg_path(
@@ -73,7 +64,7 @@ def make_pitch_figure(
     pitch_colour: Optional[str] = None,
     figure_width_pixels: int = 800,
     figure_height_pixels: int = 600,
-) -> PlotlyFigure:
+) -> go.Figure:
     """Create a plotly figure of a football pitch with markings.
 
     Args:
@@ -259,7 +250,7 @@ def make_pitch_figure(
     return fig
 
 
-def add_heatmap(fig: PlotlyFigure, data: np.ndarray) -> PlotlyFigure:
+def add_heatmap(fig: go.Figure, data: np.ndarray) -> go.Figure:
     """Add a heatmap to an existing figure.
 
     Args:

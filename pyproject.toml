@@ -22,7 +22,6 @@ classifiers = [
 dependencies = [
   "plotly",
   "plotly_express",
-  "typing_extensions",
 ]
 
 [project.optional-dependencies]
