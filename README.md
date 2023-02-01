@@ -1,6 +1,6 @@
 # plotly-football-pitch
 
-![tests](https://github.com/minimav/plotly_football_pitch/actions/workflows/test.yml/badge.svg)
+![tests](https://github.com/minimav/plotly-football-pitch/actions/workflows/test.yml/badge.svg)
 
 This repo contains code to plot football pitches using `plotly`. Currently only horizontal pitches are supported, with the origin located at the bottom left
 corner of the pitch.
