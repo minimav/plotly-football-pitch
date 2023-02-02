@@ -29,9 +29,13 @@ dev = [
     "build",
     "jupyter",
     "kaleido",
+    "myst_parser",
     "numpy",
     "pre-commit",
     "pytest",
+    "recommonmark",
+    "sphinx",
+    "sphinx_rtd_theme",
 ]
 
 [project.urls]
