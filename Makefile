@@ -1,4 +1,4 @@
-.PHONY: help
+.PHONY: help docs
 .DEFAULT_GOAL := help
 
 help:
@@ -33,5 +33,8 @@ build:  ## Build the package as tar.gz and wheel files
 	python -m build .
 
 test-pypi:  ## Push a build to test PyPI
-    python -m pip install twine
+	python -m pip install twine
 	python -m twine upload --repository testpypi dist/*
+
+docs:  ## Create API docs
+	sphinx-apidoc -e -o docs/source/ src/plotly_football_pitch
