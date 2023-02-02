@@ -33,7 +33,6 @@ dev = [
     "numpy",
     "pre-commit",
     "pytest",
-    "recommonmark",
     "sphinx",
     "sphinx_rtd_theme",
 ]

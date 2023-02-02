@@ -38,7 +38,6 @@ extensions = [
     "sphinx.ext.autosummary",
     "sphinx.ext.intersphinx",
     "sphinx.ext.napoleon",
-    # "recommonmark",
     "myst_parser",
 ]
 
