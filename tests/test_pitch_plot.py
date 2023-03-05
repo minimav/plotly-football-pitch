@@ -8,6 +8,7 @@ from plotly_football_pitch import (
     add_heatmap,
     make_pitch_figure,
     PitchDimensions,
+    PitchOrientation,
 )
 from plotly_football_pitch.pitch_background import (
     AttackVsDefenceBackground,
@@ -18,7 +19,14 @@ from plotly_football_pitch.pitch_background import (
 )
 
 
-def test_number_of_pitch_markings():
+orientations = pytest.mark.parametrize(
+    "orientation",
+    [PitchOrientation.HORIZONTAL, PitchOrientation.VERTICAL],
+)
+
+
+@orientations
+def test_number_of_pitch_markings(orientation):
     """Basic pitch should have expected number of pitch markings.
 
     These are the 9 linear markings found on the figure's `data` attribute:
@@ -35,7 +43,7 @@ def test_number_of_pitch_markings():
       * 2x penalty box arcs
     """
     dimensions = PitchDimensions()
-    fig = make_pitch_figure(dimensions)
+    fig = make_pitch_figure(dimensions, orientation=orientation)
 
     # linear markings
     assert len(fig.data) == 9
@@ -44,27 +52,31 @@ def test_number_of_pitch_markings():
     assert len(fig.layout.shapes) == 3
 
 
+@orientations
 @pytest.mark.parametrize(
     "pitch_width_metres, pitch_length_metres",
     [(10, 10), (105, 68), (68, 105), (100, 100), (2, 30)],
 )
-def test_different_pitch_dimensions(pitch_width_metres, pitch_length_metres):
+def test_different_pitch_dimensions(
+    pitch_width_metres, pitch_length_metres, orientation
+):
     """No errors are raised when custom dimensions are used."""
     dimensions = PitchDimensions(
         pitch_width_metres,
         pitch_length_metres,
     )
-    fig = make_pitch_figure(dimensions)
+    fig = make_pitch_figure(dimensions, orientation=orientation)
     assert fig
 
 
+@orientations
 @pytest.mark.parametrize(
     "width_grid, length_grid", [(10, 10), (5, 12), (4, 6), (15, 12)]
 )
-def test_adding_heat_maps(width_grid, length_grid):
+def test_adding_heat_maps(width_grid, length_grid, orientation):
     """Heatmaps of different grid sizes can be added successfully."""
     dimensions = PitchDimensions()
-    fig = make_pitch_figure(dimensions)
+    fig = make_pitch_figure(dimensions, orientation=orientation)
     num_data_on_plot = len(fig.data)
 
     random.seed(1234)
@@ -76,6 +88,7 @@ def test_adding_heat_maps(width_grid, length_grid):
     assert len(fig.data) == num_data_on_plot + 1
 
 
+@orientations
 @pytest.mark.parametrize(
     "pitch_background_cls, kwargs",
     [
@@ -102,17 +115,22 @@ def test_adding_heat_maps(width_grid, length_grid):
         ),
     ],
 )
-def test_adding_pitch_backgrounds(pitch_background_cls, kwargs):
+def test_adding_pitch_backgrounds(pitch_background_cls, kwargs, orientation):
     """Different backgrounds can be added successfully."""
     dimensions = PitchDimensions()
     pitch_background = pitch_background_cls(**kwargs)
-    make_pitch_figure(dimensions, pitch_background=pitch_background)
+    make_pitch_figure(
+        dimensions,
+        pitch_background=pitch_background,
+        orientation=orientation,
+    )
 
 
-def test_adding_heat_maps_with_kwargs():
+@orientations
+def test_adding_heat_maps_with_kwargs(orientation):
     """Heatmaps can accept kwargs."""
     dimensions = PitchDimensions()
-    fig = make_pitch_figure(dimensions)
+    fig = make_pitch_figure(dimensions, orientation=orientation)
     data = np.arange(15).reshape(5, 3)
     kwargs = {
         "colorscale": px.colors.sequential.Blues,
@@ -121,10 +139,11 @@ def test_adding_heat_maps_with_kwargs():
     add_heatmap(fig, data, **kwargs)
 
 
-def test_adding_heat_maps_with_unexpected_kwargs_raises_error():
+@orientations
+def test_adding_heat_maps_with_unexpected_kwargs_raises_error(orientation):
     """Adding heatmaps will error on unexpected kwargs."""
     dimensions = PitchDimensions()
-    fig = make_pitch_figure(dimensions)
+    fig = make_pitch_figure(dimensions, orientation=orientation)
     data = np.arange(15).reshape(5, 3)
     kwargs = {"unexpected": 0}
     with pytest.raises(ValueError, match="unexpected"):

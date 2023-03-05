@@ -4,7 +4,10 @@ import itertools
 
 import plotly.graph_objects as go
 
-from plotly_football_pitch.pitch_dimensions import PitchDimensions
+from plotly_football_pitch.pitch_dimensions import (
+    PitchDimensions,
+    PitchOrientation,
+)
 
 
 class PitchBackground(Protocol):
@@ -12,6 +15,7 @@ class PitchBackground(Protocol):
         self,
         fig: go.Figure,
         dimensions: PitchDimensions,
+        orientation: PitchOrientation,
     ) -> go.Figure:
         """Add background to a pitch.
 
@@ -19,6 +23,7 @@ class PitchBackground(Protocol):
             fig (plotly.graph_objects.Figure): Figure with pitch markings
                 already drawn.
             dimensions (PitchDimensions): Dimensions of the pitch.
+            orientation (PitchOrientation): Orientation of the pitch.
 
         Returns:
             plotly.graph_objects.Figure
@@ -36,20 +41,35 @@ class SingleColourBackground(PitchBackground):
         """
         self.colour = colour
 
-    def add_background(self, fig: go.Figure, dimensions: PitchDimensions) -> go.Figure:
+    def add_background(
+        self, fig: go.Figure, dimensions: PitchDimensions, orientation: PitchOrientation
+    ) -> go.Figure:
         """Add a single-coloured background to a pitch.
 
         Args:
             fig (plotly.graph_objects.Figure): Figure with pitch markings
                 already drawn.
             dimensions (PitchDimensions): Dimensions of the pitch.
+            orientation (PitchOrientation): Orientation of the pitch.
 
         Returns:
             plotly.graph_objects.Figure
         """
-        return fig.add_hrect(
-            y0=0,
-            y1=dimensions.pitch_width_metres,
+        if orientation == PitchOrientation.HORIZONTAL:
+            rect_method = fig.add_hrect
+            coordinates_data = {
+                "y0": 0,
+                "y1": dimensions.pitch_width_metres,
+            }
+        else:
+            rect_method = fig.add_vrect
+            coordinates_data = {
+                "x0": 0,
+                "x1": dimensions.pitch_width_metres,
+            }
+
+        return rect_method(
+            **coordinates_data,
             fillcolor=self.colour,
             layer="below",
         )
@@ -70,7 +90,9 @@ class AttackVsDefenceBackground(PitchBackground):
         self.attack_colour = attack_colour
         self.defence_colour = defence_colour
 
-    def add_background(self, fig: go.Figure, dimensions: PitchDimensions) -> go.Figure:
+    def add_background(
+        self, fig: go.Figure, dimensions: PitchDimensions, orientation: PitchOrientation
+    ) -> go.Figure:
         """Add attacking and defending team backgrounds to a pitch.
 
         Follows the standard convention for horizontal pitches whereby the left
@@ -85,22 +107,34 @@ class AttackVsDefenceBackground(PitchBackground):
         Returns:
             plotly.graph_objects.Figure
         """
+        attack_half = {
+            "y0": 0,
+            "y1": dimensions.pitch_width_metres,
+            "x0": 0,
+            "x1": dimensions.pitch_mid_length_metres,
+        }
+
+        defence_half = {
+            "y0": 0,
+            "y1": dimensions.pitch_width_metres,
+            "x0": dimensions.pitch_mid_length_metres,
+            "x1": dimensions.pitch_length_metres,
+        }
+
         fig = fig.add_shape(
             type="rect",
-            y0=0,
-            y1=dimensions.pitch_width_metres,
-            x0=0,
-            x1=dimensions.pitch_mid_length_metres,
+            **orientation.switch_axes_if_required(
+                attack_half, keys_to_switch=[("x0", "y0"), ("x1", "y1")]
+            ),
             line_color=self.attack_colour,
             fillcolor=self.attack_colour,
             layer="below",
         )
         fig = fig.add_shape(
             type="rect",
-            y0=0,
-            y1=dimensions.pitch_width_metres,
-            x0=dimensions.pitch_mid_length_metres,
-            x1=dimensions.pitch_length_metres,
+            **orientation.switch_axes_if_required(
+                defence_half, keys_to_switch=[("x0", "y0"), ("x1", "y1")]
+            ),
             line_color=self.defence_colour,
             fillcolor=self.defence_colour,
             layer="below",
@@ -126,6 +160,7 @@ class VerticalStripesBackground(PitchBackground):
         self,
         fig: go.Figure,
         dimensions: PitchDimensions,
+        orientation: PitchOrientation,
     ) -> go.Figure:
         """Add vertically-striped background to a pitch.
 
@@ -133,6 +168,7 @@ class VerticalStripesBackground(PitchBackground):
             fig (plotly.graph_objects.Figure): Figure with pitch markings
                 already drawn.
             dimensions (PitchDimensions): Dimensions of the pitch.
+            orientation (PitchOrientation): Orientation of the pitch.
 
         Returns:
             plotly.graph_objects.Figure
@@ -143,12 +179,20 @@ class VerticalStripesBackground(PitchBackground):
         for index, colour in zip(range(self.num_stripes), colour_cycle):
             x0 = index * stripe_metres
             x1 = x0 + stripe_metres
+
+            stripe = {
+                "y0": 0,
+                "y1": dimensions.pitch_width_metres,
+                "x0": x0,
+                "x1": x1,
+            }
+
             fig = fig.add_shape(
                 type="rect",
-                y0=0,
-                y1=dimensions.pitch_width_metres,
-                x0=x0,
-                x1=x1,
+                **orientation.switch_axes_if_required(
+                    stripe,
+                    keys_to_switch=[("x0", "y0"), ("x1", "y1")],
+                ),
                 line_color=colour,
                 fillcolor=colour,
                 layer="below",
@@ -170,13 +214,16 @@ class HorizontalStripesBackground(PitchBackground):
         self.colours = colours
         self.num_stripes = num_stripes
 
-    def add_background(self, fig: go.Figure, dimensions: PitchDimensions) -> go.Figure:
+    def add_background(
+        self, fig: go.Figure, dimensions: PitchDimensions, orientation: PitchOrientation
+    ) -> go.Figure:
         """Add vertically-striped background to a pitch.
 
         Args:
             fig (plotly.graph_objects.Figure): Figure with pitch markings
                 already drawn.
             dimensions (PitchDimensions): Dimensions of the pitch.
+            orientation (PitchOrientation): Orientation of the pitch.
 
         Returns:
             plotly.graph_objects.Figure
@@ -187,12 +234,20 @@ class HorizontalStripesBackground(PitchBackground):
         for index, colour in zip(range(self.num_stripes), colour_cycle):
             y0 = index * stripe_metres
             y1 = y0 + stripe_metres
+
+            stripe = {
+                "y0": y0,
+                "y1": y1,
+                "x0": 0,
+                "x1": dimensions.pitch_length_metres,
+            }
+
             fig = fig.add_shape(
                 type="rect",
-                y0=y0,
-                y1=y1,
-                x0=0,
-                x1=dimensions.pitch_length_metres,
+                **orientation.switch_axes_if_required(
+                    stripe,
+                    keys_to_switch=[("x0", "y0"), ("x1", "y1")],
+                ),
                 line_color=colour,
                 fillcolor=colour,
                 layer="below",
@@ -231,13 +286,16 @@ class ChequeredBackground(PitchBackground):
         self.num_horizontal_stripes = num_horizontal_stripes
         self.num_vertical_stripes = num_vertical_stripes
 
-    def add_background(self, fig: go.Figure, dimensions: PitchDimensions) -> go.Figure:
+    def add_background(
+        self, fig: go.Figure, dimensions: PitchDimensions, orientation: PitchOrientation
+    ) -> go.Figure:
         """Add vertically-striped background to a pitch.
 
         Args:
             fig (plotly.graph_objects.Figure): Figure with pitch markings
                 already drawn.
             dimensions (PitchDimensions): Dimensions of the pitch.
+            orientation (PitchOrientation): Orientation of the pitch.
 
         Returns:
             plotly.graph_objects.Figure
@@ -258,16 +316,18 @@ class ChequeredBackground(PitchBackground):
                 colour_cycle,
             )
             for column_index, colour in column_iterator:
-                x0 = column_index * stripe_width_metres
-                x1 = x0 + stripe_width_metres
-                y0 = row_index * stripe_height_metres
-                y1 = y0 + stripe_height_metres
+                stripe = {
+                    "x0": column_index * stripe_width_metres,
+                    "y0": row_index * stripe_height_metres,
+                }
+                stripe["x1"] = stripe["x0"] + stripe_width_metres
+                stripe["y1"] = stripe["y0"] + stripe_height_metres
+
                 fig = fig.add_shape(
                     type="rect",
-                    y0=y0,
-                    y1=y1,
-                    x0=x0,
-                    x1=x1,
+                    **orientation.switch_axes_if_required(
+                        stripe, keys_to_switch=[("x0", "y0"), ("x1", "y1")]
+                    ),
                     line_color=colour,
                     fillcolor=colour,
                     layer="below",
