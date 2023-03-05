@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>plotly_football_pitch.pitch_dimensions module &mdash; plotly_football_pitch 0.0.3 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="plotly_football_pitch.pitch_plot module" href="plotly_football_pitch.pitch_plot.html" />
+    <link rel="prev" title="plotly_football_pitch.pitch_background module" href="plotly_football_pitch.pitch_background.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            plotly_football_pitch
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="readme.html">README</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#plotly-football-pitch">plotly-football-pitch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plotly_football_pitch.html">plotly_football_pitch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plotly_football_pitch.pitch_background.html">plotly_football_pitch.pitch_background module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">plotly_football_pitch.pitch_dimensions module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plotly_football_pitch.pitch_plot.html">plotly_football_pitch.pitch_plot module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">plotly_football_pitch</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">plotly_football_pitch.pitch_dimensions module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/source/plotly_football_pitch.pitch_dimensions.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-plotly_football_pitch.pitch_dimensions">
+<span id="plotly-football-pitch-pitch-dimensions-module"></span><h1>plotly_football_pitch.pitch_dimensions module<a class="headerlink" href="#module-plotly_football_pitch.pitch_dimensions" title="Permalink to this heading"></a></h1>
+<p>Configuration for the dimensions/orientation of a football pitch to plot.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">plotly_football_pitch.pitch_dimensions.</span></span><span class="sig-name descname"><span class="pre">PitchDimensions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pitch_width_metres</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">68</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pitch_length_metres</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">105</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Dimensions for a football pitch plot.</p>
+<p>All units are in metres. Length refers to the longer pitch dimension, which
+for a horizontal pitch will be the plot’s x-axis. Width refers to the
+shorter pitch dimension, which for a horizontal pitch will be the plot’s
+y-axis. The axes will be reversed for a vertical pitch.</p>
+<p>The origin is the bottom left hand corner of the pitch.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions.centre_circle_radius_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">centre_circle_radius_metres</span></span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions.centre_circle_radius_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Radius of the centre circle in metres.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions.penalty_box_length_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">penalty_box_length_metres</span></span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions.penalty_box_length_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Penalty box length in metres (18 yards in metres).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions.penalty_box_width_max_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">penalty_box_width_max_metres</span></span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions.penalty_box_width_max_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Metres from the bottom touchline to top of penalty box.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions.penalty_box_width_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">penalty_box_width_metres</span></span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions.penalty_box_width_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Width of the penalty box in metres.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions.penalty_box_width_min_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">penalty_box_width_min_metres</span></span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions.penalty_box_width_min_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Metres from the bottom touchline to bottom of penalty box.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions.penalty_spot_length_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">penalty_spot_length_metres</span></span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions.penalty_spot_length_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Penalty spot distance from goal line (12 yards in metres).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions.pitch_length_metres">
+<span class="sig-name descname"><span class="pre">pitch_length_metres</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">105</span></em><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions.pitch_length_metres" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions.pitch_mid_length_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pitch_mid_length_metres</span></span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions.pitch_mid_length_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Distance of the centre line in metres from goal lines.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions.pitch_mid_width_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pitch_mid_width_metres</span></span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions.pitch_mid_width_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Distance in metres from side lines to the centre spot.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions.pitch_width_metres">
+<span class="sig-name descname"><span class="pre">pitch_width_metres</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">68</span></em><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions.pitch_width_metres" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions.six_yard_box_length_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">six_yard_box_length_metres</span></span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions.six_yard_box_length_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Six yard box length in metres (6 yards in metres).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions.six_yard_box_width_max_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">six_yard_box_width_max_metres</span></span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions.six_yard_box_width_max_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Metres from the bottom touchline to top of six yard box.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions.six_yard_box_width_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">six_yard_box_width_metres</span></span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions.six_yard_box_width_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Width of the six yard box in metres.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions.six_yard_box_width_min_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">six_yard_box_width_min_metres</span></span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions.six_yard_box_width_min_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Metres from the bottom touchline to bottom of six yard box.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchOrientation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">plotly_football_pitch.pitch_dimensions.</span></span><span class="sig-name descname"><span class="pre">PitchOrientation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchOrientation" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Orientation of a pitch.</p>
+<p>Horizontal means that the plot’s x-axis will represent the longer dimension
+of the pitch, and the plot’s y-axis will represent the shorter dimension of
+the pitch. The axes are reversed for a vertically oriented pitch.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchOrientation.HORIZONTAL">
+<span class="sig-name descname"><span class="pre">HORIZONTAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchOrientation.HORIZONTAL" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchOrientation.VERTICAL">
+<span class="sig-name descname"><span class="pre">VERTICAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchOrientation.VERTICAL" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchOrientation.switch_axes_if_required">
+<span class="sig-name descname"><span class="pre">switch_axes_if_required</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinate_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keys_to_switch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchOrientation.switch_axes_if_required" title="Permalink to this definition"></a></dt>
+<dd><p>Switch axes of data for vertically oriented pitches.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>coordinate_data</strong> (<em>dict</em>) – Data to show on the plot. Keys will refer
+to plot axes e.g. ‘x’, ‘y’, ‘x0’ or ‘y1’.</p></li>
+<li><p><strong>keys_to_switch</strong> (<em>Optional</em><em>[</em><em>list</em><em>[</em><em>tuple</em><em>[</em><em>str</em><em>, </em><em>str</em><em>]</em><em>]</em><em>]</em>) – Pairs for keys in
+<cite>coordinate_data</cite> to swap for a vertically oriented pitch.
+Defaults to [(‘x’, ‘y’)], which will work for plotting lines
+and scatter points. Only keys present in some tuple will be
+included in the output, therefore no additional key-value pairs
+should be included in <cite>coordinate_data</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Dictionary with coordinate data whose axes have been switched</dt><dd><p>for a vertically oriented pitch.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="plotly_football_pitch.pitch_background.html" class="btn btn-neutral float-left" title="plotly_football_pitch.pitch_background module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="plotly_football_pitch.pitch_plot.html" class="btn btn-neutral float-right" title="plotly_football_pitch.pitch_plot module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Andrew Davies.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

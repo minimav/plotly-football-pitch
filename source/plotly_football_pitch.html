@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>plotly_football_pitch package &mdash; plotly_football_pitch 0.0.3 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="plotly_football_pitch.pitch_background module" href="plotly_football_pitch.pitch_background.html" />
+    <link rel="prev" title="README" href="readme.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            plotly_football_pitch
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="readme.html">README</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#plotly-football-pitch">plotly-football-pitch</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">plotly_football_pitch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plotly_football_pitch.pitch_background.html">plotly_football_pitch.pitch_background module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html">plotly_football_pitch.pitch_dimensions module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plotly_football_pitch.pitch_plot.html">plotly_football_pitch.pitch_plot module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">plotly_football_pitch</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">plotly_football_pitch package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/source/plotly_football_pitch.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="plotly-football-pitch-package">
+<h1>plotly_football_pitch package<a class="headerlink" href="#plotly-football-pitch-package" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-plotly_football_pitch.pitch_background">
+<span id="plotly-football-pitch-pitch-background-module"></span><h2>plotly_football_pitch.pitch_background module<a class="headerlink" href="#module-plotly_football_pitch.pitch_background" title="Permalink to this heading"></a></h2>
+<p>Helpers for adding background colours to a pitch plot.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_background.AttackVsDefenceBackground">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">plotly_football_pitch.pitch_background.</span></span><span class="sig-name descname"><span class="pre">AttackVsDefenceBackground</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attack_colour</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defence_colour</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plotly_football_pitch.pitch_background.AttackVsDefenceBackground" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="plotly_football_pitch.pitch_background.html#plotly_football_pitch.pitch_background.PitchBackground" title="plotly_football_pitch.pitch_background.PitchBackground"><code class="xref py py-class docutils literal notranslate"><span class="pre">PitchBackground</span></code></a></p>
+<p>Colour each half of the pitch for a team, left=attack, right=defence.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_background.AttackVsDefenceBackground.add_background">
+<span class="sig-name descname"><span class="pre">add_background</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Figure</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchDimensions" title="plotly_football_pitch.pitch_dimensions.PitchDimensions"><span class="pre">PitchDimensions</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchOrientation" title="plotly_football_pitch.pitch_dimensions.PitchOrientation"><span class="pre">PitchOrientation</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Figure</span></span></span><a class="headerlink" href="#plotly_football_pitch.pitch_background.AttackVsDefenceBackground.add_background" title="Permalink to this definition"></a></dt>
+<dd><p>Add attacking and defending team backgrounds to a pitch.</p>
+<p>Follows the standard convention for horizontal pitches whereby the left
+hand side represents the attacking team and the right hand side the
+defending team.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fig</strong> (<em>plotly.graph_objects.Figure</em>) – Figure with pitch markings
+already drawn.</p></li>
+<li><p><strong>dimensions</strong> (<a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchDimensions" title="plotly_football_pitch.pitch_dimensions.PitchDimensions"><em>PitchDimensions</em></a>) – Dimensions of the pitch.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>plotly.graph_objects.Figure</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_background.ChequeredBackground">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">plotly_football_pitch.pitch_background.</span></span><span class="sig-name descname"><span class="pre">ChequeredBackground</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">colours</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_horizontal_stripes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_vertical_stripes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plotly_football_pitch.pitch_background.ChequeredBackground" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="plotly_football_pitch.pitch_background.html#plotly_football_pitch.pitch_background.PitchBackground" title="plotly_football_pitch.pitch_background.PitchBackground"><code class="xref py py-class docutils literal notranslate"><span class="pre">PitchBackground</span></code></a></p>
+<p>Chequered pitch using two alternating colours.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_background.ChequeredBackground.add_background">
+<span class="sig-name descname"><span class="pre">add_background</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Figure</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchDimensions" title="plotly_football_pitch.pitch_dimensions.PitchDimensions"><span class="pre">PitchDimensions</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchOrientation" title="plotly_football_pitch.pitch_dimensions.PitchOrientation"><span class="pre">PitchOrientation</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Figure</span></span></span><a class="headerlink" href="#plotly_football_pitch.pitch_background.ChequeredBackground.add_background" title="Permalink to this definition"></a></dt>
+<dd><p>Add vertically-striped background to a pitch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fig</strong> (<em>plotly.graph_objects.Figure</em>) – Figure with pitch markings
+already drawn.</p></li>
+<li><p><strong>dimensions</strong> (<a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchDimensions" title="plotly_football_pitch.pitch_dimensions.PitchDimensions"><em>PitchDimensions</em></a>) – Dimensions of the pitch.</p></li>
+<li><p><strong>orientation</strong> (<a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchOrientation" title="plotly_football_pitch.pitch_dimensions.PitchOrientation"><em>PitchOrientation</em></a>) – Orientation of the pitch.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>plotly.graph_objects.Figure</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_background.HorizontalStripesBackground">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">plotly_football_pitch.pitch_background.</span></span><span class="sig-name descname"><span class="pre">HorizontalStripesBackground</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">colours</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_stripes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plotly_football_pitch.pitch_background.HorizontalStripesBackground" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="plotly_football_pitch.pitch_background.html#plotly_football_pitch.pitch_background.PitchBackground" title="plotly_football_pitch.pitch_background.PitchBackground"><code class="xref py py-class docutils literal notranslate"><span class="pre">PitchBackground</span></code></a></p>
+<p>Horizontal stripes using specified colour cycle.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_background.HorizontalStripesBackground.add_background">
+<span class="sig-name descname"><span class="pre">add_background</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Figure</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchDimensions" title="plotly_football_pitch.pitch_dimensions.PitchDimensions"><span class="pre">PitchDimensions</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchOrientation" title="plotly_football_pitch.pitch_dimensions.PitchOrientation"><span class="pre">PitchOrientation</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Figure</span></span></span><a class="headerlink" href="#plotly_football_pitch.pitch_background.HorizontalStripesBackground.add_background" title="Permalink to this definition"></a></dt>
+<dd><p>Add vertically-striped background to a pitch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fig</strong> (<em>plotly.graph_objects.Figure</em>) – Figure with pitch markings
+already drawn.</p></li>
+<li><p><strong>dimensions</strong> (<a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchDimensions" title="plotly_football_pitch.pitch_dimensions.PitchDimensions"><em>PitchDimensions</em></a>) – Dimensions of the pitch.</p></li>
+<li><p><strong>orientation</strong> (<a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchOrientation" title="plotly_football_pitch.pitch_dimensions.PitchOrientation"><em>PitchOrientation</em></a>) – Orientation of the pitch.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>plotly.graph_objects.Figure</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_background.PitchBackground">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">plotly_football_pitch.pitch_background.</span></span><span class="sig-name descname"><span class="pre">PitchBackground</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plotly_football_pitch.pitch_background.PitchBackground" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Protocol</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_background.PitchBackground.add_background">
+<span class="sig-name descname"><span class="pre">add_background</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Figure</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchDimensions" title="plotly_football_pitch.pitch_dimensions.PitchDimensions"><span class="pre">PitchDimensions</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchOrientation" title="plotly_football_pitch.pitch_dimensions.PitchOrientation"><span class="pre">PitchOrientation</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Figure</span></span></span><a class="headerlink" href="#plotly_football_pitch.pitch_background.PitchBackground.add_background" title="Permalink to this definition"></a></dt>
+<dd><p>Add background to a pitch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fig</strong> (<em>plotly.graph_objects.Figure</em>) – Figure with pitch markings
+already drawn.</p></li>
+<li><p><strong>dimensions</strong> (<a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchDimensions" title="plotly_football_pitch.pitch_dimensions.PitchDimensions"><em>PitchDimensions</em></a>) – Dimensions of the pitch.</p></li>
+<li><p><strong>orientation</strong> (<a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchOrientation" title="plotly_football_pitch.pitch_dimensions.PitchOrientation"><em>PitchOrientation</em></a>) – Orientation of the pitch.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>plotly.graph_objects.Figure</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_background.SingleColourBackground">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">plotly_football_pitch.pitch_background.</span></span><span class="sig-name descname"><span class="pre">SingleColourBackground</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">colour</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plotly_football_pitch.pitch_background.SingleColourBackground" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="plotly_football_pitch.pitch_background.html#plotly_football_pitch.pitch_background.PitchBackground" title="plotly_football_pitch.pitch_background.PitchBackground"><code class="xref py py-class docutils literal notranslate"><span class="pre">PitchBackground</span></code></a></p>
+<p>Add a single colour background to a fooball pitch.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_background.SingleColourBackground.add_background">
+<span class="sig-name descname"><span class="pre">add_background</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Figure</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchDimensions" title="plotly_football_pitch.pitch_dimensions.PitchDimensions"><span class="pre">PitchDimensions</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchOrientation" title="plotly_football_pitch.pitch_dimensions.PitchOrientation"><span class="pre">PitchOrientation</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Figure</span></span></span><a class="headerlink" href="#plotly_football_pitch.pitch_background.SingleColourBackground.add_background" title="Permalink to this definition"></a></dt>
+<dd><p>Add a single-coloured background to a pitch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fig</strong> (<em>plotly.graph_objects.Figure</em>) – Figure with pitch markings
+already drawn.</p></li>
+<li><p><strong>dimensions</strong> (<a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchDimensions" title="plotly_football_pitch.pitch_dimensions.PitchDimensions"><em>PitchDimensions</em></a>) – Dimensions of the pitch.</p></li>
+<li><p><strong>orientation</strong> (<a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchOrientation" title="plotly_football_pitch.pitch_dimensions.PitchOrientation"><em>PitchOrientation</em></a>) – Orientation of the pitch.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>plotly.graph_objects.Figure</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_background.VerticalStripesBackground">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">plotly_football_pitch.pitch_background.</span></span><span class="sig-name descname"><span class="pre">VerticalStripesBackground</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">colours</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_stripes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plotly_football_pitch.pitch_background.VerticalStripesBackground" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="plotly_football_pitch.pitch_background.html#plotly_football_pitch.pitch_background.PitchBackground" title="plotly_football_pitch.pitch_background.PitchBackground"><code class="xref py py-class docutils literal notranslate"><span class="pre">PitchBackground</span></code></a></p>
+<p>Vertical stripes using specified colour cycle.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_background.VerticalStripesBackground.add_background">
+<span class="sig-name descname"><span class="pre">add_background</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Figure</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchDimensions" title="plotly_football_pitch.pitch_dimensions.PitchDimensions"><span class="pre">PitchDimensions</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchOrientation" title="plotly_football_pitch.pitch_dimensions.PitchOrientation"><span class="pre">PitchOrientation</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Figure</span></span></span><a class="headerlink" href="#plotly_football_pitch.pitch_background.VerticalStripesBackground.add_background" title="Permalink to this definition"></a></dt>
+<dd><p>Add vertically-striped background to a pitch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fig</strong> (<em>plotly.graph_objects.Figure</em>) – Figure with pitch markings
+already drawn.</p></li>
+<li><p><strong>dimensions</strong> (<a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchDimensions" title="plotly_football_pitch.pitch_dimensions.PitchDimensions"><em>PitchDimensions</em></a>) – Dimensions of the pitch.</p></li>
+<li><p><strong>orientation</strong> (<a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchOrientation" title="plotly_football_pitch.pitch_dimensions.PitchOrientation"><em>PitchOrientation</em></a>) – Orientation of the pitch.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>plotly.graph_objects.Figure</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-plotly_football_pitch.pitch_dimensions">
+<span id="plotly-football-pitch-pitch-dimensions-module"></span><h2>plotly_football_pitch.pitch_dimensions module<a class="headerlink" href="#module-plotly_football_pitch.pitch_dimensions" title="Permalink to this heading"></a></h2>
+<p>Configuration for the dimensions/orientation of a football pitch to plot.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">plotly_football_pitch.pitch_dimensions.</span></span><span class="sig-name descname"><span class="pre">PitchDimensions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pitch_width_metres</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">68</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pitch_length_metres</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">105</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Dimensions for a football pitch plot.</p>
+<p>All units are in metres. Length refers to the longer pitch dimension, which
+for a horizontal pitch will be the plot’s x-axis. Width refers to the
+shorter pitch dimension, which for a horizontal pitch will be the plot’s
+y-axis. The axes will be reversed for a vertical pitch.</p>
+<p>The origin is the bottom left hand corner of the pitch.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions.centre_circle_radius_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">centre_circle_radius_metres</span></span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions.centre_circle_radius_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Radius of the centre circle in metres.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions.penalty_box_length_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">penalty_box_length_metres</span></span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions.penalty_box_length_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Penalty box length in metres (18 yards in metres).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions.penalty_box_width_max_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">penalty_box_width_max_metres</span></span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions.penalty_box_width_max_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Metres from the bottom touchline to top of penalty box.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions.penalty_box_width_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">penalty_box_width_metres</span></span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions.penalty_box_width_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Width of the penalty box in metres.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions.penalty_box_width_min_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">penalty_box_width_min_metres</span></span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions.penalty_box_width_min_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Metres from the bottom touchline to bottom of penalty box.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions.penalty_spot_length_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">penalty_spot_length_metres</span></span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions.penalty_spot_length_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Penalty spot distance from goal line (12 yards in metres).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions.pitch_length_metres">
+<span class="sig-name descname"><span class="pre">pitch_length_metres</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">105</span></em><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions.pitch_length_metres" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions.pitch_mid_length_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pitch_mid_length_metres</span></span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions.pitch_mid_length_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Distance of the centre line in metres from goal lines.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions.pitch_mid_width_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pitch_mid_width_metres</span></span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions.pitch_mid_width_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Distance in metres from side lines to the centre spot.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions.pitch_width_metres">
+<span class="sig-name descname"><span class="pre">pitch_width_metres</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">68</span></em><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions.pitch_width_metres" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions.six_yard_box_length_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">six_yard_box_length_metres</span></span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions.six_yard_box_length_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Six yard box length in metres (6 yards in metres).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions.six_yard_box_width_max_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">six_yard_box_width_max_metres</span></span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions.six_yard_box_width_max_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Metres from the bottom touchline to top of six yard box.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions.six_yard_box_width_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">six_yard_box_width_metres</span></span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions.six_yard_box_width_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Width of the six yard box in metres.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchDimensions.six_yard_box_width_min_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">six_yard_box_width_min_metres</span></span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchDimensions.six_yard_box_width_min_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Metres from the bottom touchline to bottom of six yard box.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchOrientation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">plotly_football_pitch.pitch_dimensions.</span></span><span class="sig-name descname"><span class="pre">PitchOrientation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchOrientation" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Orientation of a pitch.</p>
+<p>Horizontal means that the plot’s x-axis will represent the longer dimension
+of the pitch, and the plot’s y-axis will represent the shorter dimension of
+the pitch. The axes are reversed for a vertically oriented pitch.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchOrientation.HORIZONTAL">
+<span class="sig-name descname"><span class="pre">HORIZONTAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchOrientation.HORIZONTAL" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchOrientation.VERTICAL">
+<span class="sig-name descname"><span class="pre">VERTICAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchOrientation.VERTICAL" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_dimensions.PitchOrientation.switch_axes_if_required">
+<span class="sig-name descname"><span class="pre">switch_axes_if_required</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinate_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keys_to_switch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#plotly_football_pitch.pitch_dimensions.PitchOrientation.switch_axes_if_required" title="Permalink to this definition"></a></dt>
+<dd><p>Switch axes of data for vertically oriented pitches.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>coordinate_data</strong> (<em>dict</em>) – Data to show on the plot. Keys will refer
+to plot axes e.g. ‘x’, ‘y’, ‘x0’ or ‘y1’.</p></li>
+<li><p><strong>keys_to_switch</strong> (<em>Optional</em><em>[</em><em>list</em><em>[</em><em>tuple</em><em>[</em><em>str</em><em>, </em><em>str</em><em>]</em><em>]</em><em>]</em>) – Pairs for keys in
+<cite>coordinate_data</cite> to swap for a vertically oriented pitch.
+Defaults to [(‘x’, ‘y’)], which will work for plotting lines
+and scatter points. Only keys present in some tuple will be
+included in the output, therefore no additional key-value pairs
+should be included in <cite>coordinate_data</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Dictionary with coordinate data whose axes have been switched</dt><dd><p>for a vertically oriented pitch.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-plotly_football_pitch.pitch_plot">
+<span id="plotly-football-pitch-pitch-plot-module"></span><h2>plotly_football_pitch.pitch_plot module<a class="headerlink" href="#module-plotly_football_pitch.pitch_plot" title="Permalink to this heading"></a></h2>
+<p>Create a plotly figure of a football pitch.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_plot.add_heatmap">
+<span class="sig-prename descclassname"><span class="pre">plotly_football_pitch.pitch_plot.</span></span><span class="sig-name descname"><span class="pre">add_heatmap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Figure</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Figure</span></span></span><a class="headerlink" href="#plotly_football_pitch.pitch_plot.add_heatmap" title="Permalink to this definition"></a></dt>
+<dd><p>Add a heatmap to an existing figure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fig</strong> (<em>plotly.graph_objects.Figure</em>) – Figure on which to add heatmap.
+Expected to have axis ranges directly set so that
+<cite>fig.layout.xaxis.range</cite> and <cite>fig.layout.yaxis.range</cite> are not None.</p></li>
+<li><p><strong>data</strong> (<em>np.ndarray</em>) – 2-dimensional arrays of values to plot on the figure. Number of
+grid squares in each dimension will be inferred from the shape of
+this array. The i’th row of the array corresponds to the i’th row
+of the grid on the pitch starting from the bottom, while the j’th
+column of the array corresponds to the j’th column of the grid
+starting from the left hand side. Thus, in particular, <cite>data[0, 0]</cite>
+corresponds to the bottom left grid square.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>plotly.graph_objects.Figure</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_plot.make_ellipse_arc_svg_path">
+<span class="sig-prename descclassname"><span class="pre">plotly_football_pitch.pitch_plot.</span></span><span class="sig-name descname"><span class="pre">make_ellipse_arc_svg_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_centre</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_centre</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_angle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_angle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">6.283185307179586</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_points</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">closed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#plotly_football_pitch.pitch_plot.make_ellipse_arc_svg_path" title="Permalink to this definition"></a></dt>
+<dd><p>Create an SVG path for an arc of an ellipse.</p>
+<p>Defaults produce the full perimeter of a circle of radius 1 centred on the
+origin.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_centre</strong> (<em>float</em>) – x-coordinate of the centre of the ellipse, default
+0.0.</p></li>
+<li><p><strong>y_centre</strong> (<em>float</em>) – y-coordinate of the centre of the ellipse, default
+0.0.</p></li>
+<li><p><strong>a</strong> (<em>float</em>) – ‘Radius’ of the ellipse in the direction of the x-axis,
+default 1.0.</p></li>
+<li><p><strong>b</strong> (<em>float</em>) – ‘Radius’ of the ellipse in the direction of the y-axis,
+default 1.0.</p></li>
+<li><p><strong>start_angle</strong> (<em>float</em>) – Angle in radians from which the arc should start
+being drawn in an anticlockwise direction, default 0.</p></li>
+<li><p><strong>end_angle</strong> (<em>float</em>) – Angle in radians at which the arc should terminate,
+being drawn in an anticlockwise direction, default 2 * pi.</p></li>
+<li><p><strong>num_points</strong> (<em>int</em>) – Number of points in the interpolation of the arc,
+default 100.</p></li>
+<li><p><strong>closed</strong> (<em>bool</em>) – Whether the arc should be closed, default False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>plotly.graph_objects.Figure</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="plotly_football_pitch.pitch_plot.make_pitch_figure">
+<span class="sig-prename descclassname"><span class="pre">plotly_football_pitch.pitch_plot.</span></span><span class="sig-name descname"><span class="pre">make_pitch_figure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dimensions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchDimensions" title="plotly_football_pitch.pitch_dimensions.PitchDimensions"><span class="pre">PitchDimensions</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">marking_colour</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'black'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">marking_width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pitch_background</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="plotly_football_pitch.pitch_background.html#plotly_football_pitch.pitch_background.PitchBackground" title="plotly_football_pitch.pitch_background.PitchBackground"><span class="pre">PitchBackground</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figure_width_pixels</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">800</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figure_height_pixels</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">600</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchOrientation" title="plotly_football_pitch.pitch_dimensions.PitchOrientation"><span class="pre">PitchOrientation</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">PitchOrientation.HORIZONTAL</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Figure</span></span></span><a class="headerlink" href="#plotly_football_pitch.pitch_plot.make_pitch_figure" title="Permalink to this definition"></a></dt>
+<dd><p>Create a plotly figure of a football pitch with markings.</p>
+<p>Some markings which appear in both team’s halves e.g. penalty box arc, are
+defined in terms of the attacking team and the defending team. For a
+horizontally oriented pitch the attacking team’s half is the left hand one,
+while for a vertically oriented one their half is the bottom one.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dimensions</strong> (<a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchDimensions" title="plotly_football_pitch.pitch_dimensions.PitchDimensions"><em>PitchDimensions</em></a>) – Dimensions of the pitch to plot.</p></li>
+<li><p><strong>marking_colour</strong> (<em>str</em>) – Colour of the pitch markings, default “black”.</p></li>
+<li><p><strong>marking_width</strong> (<em>int</em>) – Width of the pitch markings, default 4.</p></li>
+<li><p><strong>pitch_background</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="plotly_football_pitch.pitch_background.html#plotly_football_pitch.pitch_background.PitchBackground" title="plotly_football_pitch.pitch_background.PitchBackground"><em>PitchBackground</em></a><em>]</em>) – Strategy for plotting a
+background colour to the pitch. The default of None results in a
+transparent background.</p></li>
+<li><p><strong>figure_width_pixels</strong> (<em>int</em>) – Width of the figure, default 800. This
+corresponds to the long axis of the pitch (pitch length).</p></li>
+<li><p><strong>figure_height_pixels</strong> (<em>int</em>) – Height of the figure, default 600. This
+corresponds to the short axis of the pitch (pitch width).</p></li>
+<li><p><strong>orientation</strong> (<a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchOrientation" title="plotly_football_pitch.pitch_dimensions.PitchOrientation"><em>PitchOrientation</em></a>) – Orientation of the pitch, defaults to
+a horizontal pitch.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>plotly.graph_objects.Figure</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-plotly_football_pitch">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-plotly_football_pitch" title="Permalink to this heading"></a></h2>
+<p>Base module of plotly_football_pitch package.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="plotly_football_pitch.AttackVsDefenceBackground">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">plotly_football_pitch.</span></span><span class="sig-name descname"><span class="pre">AttackVsDefenceBackground</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attack_colour</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defence_colour</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plotly_football_pitch.AttackVsDefenceBackground" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="plotly_football_pitch.pitch_background.html#plotly_football_pitch.pitch_background.PitchBackground" title="plotly_football_pitch.pitch_background.PitchBackground"><code class="xref py py-class docutils literal notranslate"><span class="pre">PitchBackground</span></code></a></p>
+<p>Colour each half of the pitch for a team, left=attack, right=defence.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="plotly_football_pitch.AttackVsDefenceBackground.add_background">
+<span class="sig-name descname"><span class="pre">add_background</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Figure</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchDimensions" title="plotly_football_pitch.pitch_dimensions.PitchDimensions"><span class="pre">PitchDimensions</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchOrientation" title="plotly_football_pitch.pitch_dimensions.PitchOrientation"><span class="pre">PitchOrientation</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Figure</span></span></span><a class="headerlink" href="#plotly_football_pitch.AttackVsDefenceBackground.add_background" title="Permalink to this definition"></a></dt>
+<dd><p>Add attacking and defending team backgrounds to a pitch.</p>
+<p>Follows the standard convention for horizontal pitches whereby the left
+hand side represents the attacking team and the right hand side the
+defending team.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fig</strong> (<em>plotly.graph_objects.Figure</em>) – Figure with pitch markings
+already drawn.</p></li>
+<li><p><strong>dimensions</strong> (<a class="reference internal" href="#plotly_football_pitch.PitchDimensions" title="plotly_football_pitch.PitchDimensions"><em>PitchDimensions</em></a>) – Dimensions of the pitch.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>plotly.graph_objects.Figure</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="plotly_football_pitch.ChequeredBackground">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">plotly_football_pitch.</span></span><span class="sig-name descname"><span class="pre">ChequeredBackground</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">colours</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_horizontal_stripes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_vertical_stripes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plotly_football_pitch.ChequeredBackground" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="plotly_football_pitch.pitch_background.html#plotly_football_pitch.pitch_background.PitchBackground" title="plotly_football_pitch.pitch_background.PitchBackground"><code class="xref py py-class docutils literal notranslate"><span class="pre">PitchBackground</span></code></a></p>
+<p>Chequered pitch using two alternating colours.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="plotly_football_pitch.ChequeredBackground.add_background">
+<span class="sig-name descname"><span class="pre">add_background</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Figure</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchDimensions" title="plotly_football_pitch.pitch_dimensions.PitchDimensions"><span class="pre">PitchDimensions</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchOrientation" title="plotly_football_pitch.pitch_dimensions.PitchOrientation"><span class="pre">PitchOrientation</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Figure</span></span></span><a class="headerlink" href="#plotly_football_pitch.ChequeredBackground.add_background" title="Permalink to this definition"></a></dt>
+<dd><p>Add vertically-striped background to a pitch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fig</strong> (<em>plotly.graph_objects.Figure</em>) – Figure with pitch markings
+already drawn.</p></li>
+<li><p><strong>dimensions</strong> (<a class="reference internal" href="#plotly_football_pitch.PitchDimensions" title="plotly_football_pitch.PitchDimensions"><em>PitchDimensions</em></a>) – Dimensions of the pitch.</p></li>
+<li><p><strong>orientation</strong> (<a class="reference internal" href="#plotly_football_pitch.PitchOrientation" title="plotly_football_pitch.PitchOrientation"><em>PitchOrientation</em></a>) – Orientation of the pitch.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>plotly.graph_objects.Figure</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="plotly_football_pitch.HorizontalStripesBackground">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">plotly_football_pitch.</span></span><span class="sig-name descname"><span class="pre">HorizontalStripesBackground</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">colours</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_stripes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plotly_football_pitch.HorizontalStripesBackground" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="plotly_football_pitch.pitch_background.html#plotly_football_pitch.pitch_background.PitchBackground" title="plotly_football_pitch.pitch_background.PitchBackground"><code class="xref py py-class docutils literal notranslate"><span class="pre">PitchBackground</span></code></a></p>
+<p>Horizontal stripes using specified colour cycle.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="plotly_football_pitch.HorizontalStripesBackground.add_background">
+<span class="sig-name descname"><span class="pre">add_background</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Figure</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchDimensions" title="plotly_football_pitch.pitch_dimensions.PitchDimensions"><span class="pre">PitchDimensions</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchOrientation" title="plotly_football_pitch.pitch_dimensions.PitchOrientation"><span class="pre">PitchOrientation</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Figure</span></span></span><a class="headerlink" href="#plotly_football_pitch.HorizontalStripesBackground.add_background" title="Permalink to this definition"></a></dt>
+<dd><p>Add vertically-striped background to a pitch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fig</strong> (<em>plotly.graph_objects.Figure</em>) – Figure with pitch markings
+already drawn.</p></li>
+<li><p><strong>dimensions</strong> (<a class="reference internal" href="#plotly_football_pitch.PitchDimensions" title="plotly_football_pitch.PitchDimensions"><em>PitchDimensions</em></a>) – Dimensions of the pitch.</p></li>
+<li><p><strong>orientation</strong> (<a class="reference internal" href="#plotly_football_pitch.PitchOrientation" title="plotly_football_pitch.PitchOrientation"><em>PitchOrientation</em></a>) – Orientation of the pitch.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>plotly.graph_objects.Figure</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="plotly_football_pitch.PitchDimensions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">plotly_football_pitch.</span></span><span class="sig-name descname"><span class="pre">PitchDimensions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pitch_width_metres</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">68</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pitch_length_metres</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">105</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plotly_football_pitch.PitchDimensions" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Dimensions for a football pitch plot.</p>
+<p>All units are in metres. Length refers to the longer pitch dimension, which
+for a horizontal pitch will be the plot’s x-axis. Width refers to the
+shorter pitch dimension, which for a horizontal pitch will be the plot’s
+y-axis. The axes will be reversed for a vertical pitch.</p>
+<p>The origin is the bottom left hand corner of the pitch.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.PitchDimensions.centre_circle_radius_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">centre_circle_radius_metres</span></span><a class="headerlink" href="#plotly_football_pitch.PitchDimensions.centre_circle_radius_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Radius of the centre circle in metres.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.PitchDimensions.penalty_box_length_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">penalty_box_length_metres</span></span><a class="headerlink" href="#plotly_football_pitch.PitchDimensions.penalty_box_length_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Penalty box length in metres (18 yards in metres).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.PitchDimensions.penalty_box_width_max_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">penalty_box_width_max_metres</span></span><a class="headerlink" href="#plotly_football_pitch.PitchDimensions.penalty_box_width_max_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Metres from the bottom touchline to top of penalty box.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.PitchDimensions.penalty_box_width_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">penalty_box_width_metres</span></span><a class="headerlink" href="#plotly_football_pitch.PitchDimensions.penalty_box_width_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Width of the penalty box in metres.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.PitchDimensions.penalty_box_width_min_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">penalty_box_width_min_metres</span></span><a class="headerlink" href="#plotly_football_pitch.PitchDimensions.penalty_box_width_min_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Metres from the bottom touchline to bottom of penalty box.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.PitchDimensions.penalty_spot_length_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">penalty_spot_length_metres</span></span><a class="headerlink" href="#plotly_football_pitch.PitchDimensions.penalty_spot_length_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Penalty spot distance from goal line (12 yards in metres).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="plotly_football_pitch.PitchDimensions.pitch_length_metres">
+<span class="sig-name descname"><span class="pre">pitch_length_metres</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">105</span></em><a class="headerlink" href="#plotly_football_pitch.PitchDimensions.pitch_length_metres" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.PitchDimensions.pitch_mid_length_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pitch_mid_length_metres</span></span><a class="headerlink" href="#plotly_football_pitch.PitchDimensions.pitch_mid_length_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Distance of the centre line in metres from goal lines.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.PitchDimensions.pitch_mid_width_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pitch_mid_width_metres</span></span><a class="headerlink" href="#plotly_football_pitch.PitchDimensions.pitch_mid_width_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Distance in metres from side lines to the centre spot.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="plotly_football_pitch.PitchDimensions.pitch_width_metres">
+<span class="sig-name descname"><span class="pre">pitch_width_metres</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">68</span></em><a class="headerlink" href="#plotly_football_pitch.PitchDimensions.pitch_width_metres" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.PitchDimensions.six_yard_box_length_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">six_yard_box_length_metres</span></span><a class="headerlink" href="#plotly_football_pitch.PitchDimensions.six_yard_box_length_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Six yard box length in metres (6 yards in metres).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.PitchDimensions.six_yard_box_width_max_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">six_yard_box_width_max_metres</span></span><a class="headerlink" href="#plotly_football_pitch.PitchDimensions.six_yard_box_width_max_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Metres from the bottom touchline to top of six yard box.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.PitchDimensions.six_yard_box_width_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">six_yard_box_width_metres</span></span><a class="headerlink" href="#plotly_football_pitch.PitchDimensions.six_yard_box_width_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Width of the six yard box in metres.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="plotly_football_pitch.PitchDimensions.six_yard_box_width_min_metres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">six_yard_box_width_min_metres</span></span><a class="headerlink" href="#plotly_football_pitch.PitchDimensions.six_yard_box_width_min_metres" title="Permalink to this definition"></a></dt>
+<dd><p>Metres from the bottom touchline to bottom of six yard box.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="plotly_football_pitch.PitchOrientation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">plotly_football_pitch.</span></span><span class="sig-name descname"><span class="pre">PitchOrientation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plotly_football_pitch.PitchOrientation" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Orientation of a pitch.</p>
+<p>Horizontal means that the plot’s x-axis will represent the longer dimension
+of the pitch, and the plot’s y-axis will represent the shorter dimension of
+the pitch. The axes are reversed for a vertically oriented pitch.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="plotly_football_pitch.PitchOrientation.HORIZONTAL">
+<span class="sig-name descname"><span class="pre">HORIZONTAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#plotly_football_pitch.PitchOrientation.HORIZONTAL" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="plotly_football_pitch.PitchOrientation.VERTICAL">
+<span class="sig-name descname"><span class="pre">VERTICAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#plotly_football_pitch.PitchOrientation.VERTICAL" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="plotly_football_pitch.PitchOrientation.switch_axes_if_required">
+<span class="sig-name descname"><span class="pre">switch_axes_if_required</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinate_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keys_to_switch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#plotly_football_pitch.PitchOrientation.switch_axes_if_required" title="Permalink to this definition"></a></dt>
+<dd><p>Switch axes of data for vertically oriented pitches.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>coordinate_data</strong> (<em>dict</em>) – Data to show on the plot. Keys will refer
+to plot axes e.g. ‘x’, ‘y’, ‘x0’ or ‘y1’.</p></li>
+<li><p><strong>keys_to_switch</strong> (<em>Optional</em><em>[</em><em>list</em><em>[</em><em>tuple</em><em>[</em><em>str</em><em>, </em><em>str</em><em>]</em><em>]</em><em>]</em>) – Pairs for keys in
+<cite>coordinate_data</cite> to swap for a vertically oriented pitch.
+Defaults to [(‘x’, ‘y’)], which will work for plotting lines
+and scatter points. Only keys present in some tuple will be
+included in the output, therefore no additional key-value pairs
+should be included in <cite>coordinate_data</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Dictionary with coordinate data whose axes have been switched</dt><dd><p>for a vertically oriented pitch.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="plotly_football_pitch.SingleColourBackground">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">plotly_football_pitch.</span></span><span class="sig-name descname"><span class="pre">SingleColourBackground</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">colour</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plotly_football_pitch.SingleColourBackground" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="plotly_football_pitch.pitch_background.html#plotly_football_pitch.pitch_background.PitchBackground" title="plotly_football_pitch.pitch_background.PitchBackground"><code class="xref py py-class docutils literal notranslate"><span class="pre">PitchBackground</span></code></a></p>
+<p>Add a single colour background to a fooball pitch.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="plotly_football_pitch.SingleColourBackground.add_background">
+<span class="sig-name descname"><span class="pre">add_background</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Figure</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchDimensions" title="plotly_football_pitch.pitch_dimensions.PitchDimensions"><span class="pre">PitchDimensions</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchOrientation" title="plotly_football_pitch.pitch_dimensions.PitchOrientation"><span class="pre">PitchOrientation</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Figure</span></span></span><a class="headerlink" href="#plotly_football_pitch.SingleColourBackground.add_background" title="Permalink to this definition"></a></dt>
+<dd><p>Add a single-coloured background to a pitch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fig</strong> (<em>plotly.graph_objects.Figure</em>) – Figure with pitch markings
+already drawn.</p></li>
+<li><p><strong>dimensions</strong> (<a class="reference internal" href="#plotly_football_pitch.PitchDimensions" title="plotly_football_pitch.PitchDimensions"><em>PitchDimensions</em></a>) – Dimensions of the pitch.</p></li>
+<li><p><strong>orientation</strong> (<a class="reference internal" href="#plotly_football_pitch.PitchOrientation" title="plotly_football_pitch.PitchOrientation"><em>PitchOrientation</em></a>) – Orientation of the pitch.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>plotly.graph_objects.Figure</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="plotly_football_pitch.VerticalStripesBackground">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">plotly_football_pitch.</span></span><span class="sig-name descname"><span class="pre">VerticalStripesBackground</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">colours</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_stripes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plotly_football_pitch.VerticalStripesBackground" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="plotly_football_pitch.pitch_background.html#plotly_football_pitch.pitch_background.PitchBackground" title="plotly_football_pitch.pitch_background.PitchBackground"><code class="xref py py-class docutils literal notranslate"><span class="pre">PitchBackground</span></code></a></p>
+<p>Vertical stripes using specified colour cycle.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="plotly_football_pitch.VerticalStripesBackground.add_background">
+<span class="sig-name descname"><span class="pre">add_background</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Figure</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchDimensions" title="plotly_football_pitch.pitch_dimensions.PitchDimensions"><span class="pre">PitchDimensions</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchOrientation" title="plotly_football_pitch.pitch_dimensions.PitchOrientation"><span class="pre">PitchOrientation</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Figure</span></span></span><a class="headerlink" href="#plotly_football_pitch.VerticalStripesBackground.add_background" title="Permalink to this definition"></a></dt>
+<dd><p>Add vertically-striped background to a pitch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fig</strong> (<em>plotly.graph_objects.Figure</em>) – Figure with pitch markings
+already drawn.</p></li>
+<li><p><strong>dimensions</strong> (<a class="reference internal" href="#plotly_football_pitch.PitchDimensions" title="plotly_football_pitch.PitchDimensions"><em>PitchDimensions</em></a>) – Dimensions of the pitch.</p></li>
+<li><p><strong>orientation</strong> (<a class="reference internal" href="#plotly_football_pitch.PitchOrientation" title="plotly_football_pitch.PitchOrientation"><em>PitchOrientation</em></a>) – Orientation of the pitch.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>plotly.graph_objects.Figure</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="plotly_football_pitch.add_heatmap">
+<span class="sig-prename descclassname"><span class="pre">plotly_football_pitch.</span></span><span class="sig-name descname"><span class="pre">add_heatmap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Figure</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Figure</span></span></span><a class="headerlink" href="#plotly_football_pitch.add_heatmap" title="Permalink to this definition"></a></dt>
+<dd><p>Add a heatmap to an existing figure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fig</strong> (<em>plotly.graph_objects.Figure</em>) – Figure on which to add heatmap.
+Expected to have axis ranges directly set so that
+<cite>fig.layout.xaxis.range</cite> and <cite>fig.layout.yaxis.range</cite> are not None.</p></li>
+<li><p><strong>data</strong> (<em>np.ndarray</em>) – 2-dimensional arrays of values to plot on the figure. Number of
+grid squares in each dimension will be inferred from the shape of
+this array. The i’th row of the array corresponds to the i’th row
+of the grid on the pitch starting from the bottom, while the j’th
+column of the array corresponds to the j’th column of the grid
+starting from the left hand side. Thus, in particular, <cite>data[0, 0]</cite>
+corresponds to the bottom left grid square.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>plotly.graph_objects.Figure</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="plotly_football_pitch.make_pitch_figure">
+<span class="sig-prename descclassname"><span class="pre">plotly_football_pitch.</span></span><span class="sig-name descname"><span class="pre">make_pitch_figure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dimensions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchDimensions" title="plotly_football_pitch.pitch_dimensions.PitchDimensions"><span class="pre">PitchDimensions</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">marking_colour</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'black'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">marking_width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pitch_background</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="plotly_football_pitch.pitch_background.html#plotly_football_pitch.pitch_background.PitchBackground" title="plotly_football_pitch.pitch_background.PitchBackground"><span class="pre">PitchBackground</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figure_width_pixels</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">800</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figure_height_pixels</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">600</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="plotly_football_pitch.pitch_dimensions.html#plotly_football_pitch.pitch_dimensions.PitchOrientation" title="plotly_football_pitch.pitch_dimensions.PitchOrientation"><span class="pre">PitchOrientation</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">PitchOrientation.HORIZONTAL</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Figure</span></span></span><a class="headerlink" href="#plotly_football_pitch.make_pitch_figure" title="Permalink to this definition"></a></dt>
+<dd><p>Create a plotly figure of a football pitch with markings.</p>
+<p>Some markings which appear in both team’s halves e.g. penalty box arc, are
+defined in terms of the attacking team and the defending team. For a
+horizontally oriented pitch the attacking team’s half is the left hand one,
+while for a vertically oriented one their half is the bottom one.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dimensions</strong> (<a class="reference internal" href="#plotly_football_pitch.PitchDimensions" title="plotly_football_pitch.PitchDimensions"><em>PitchDimensions</em></a>) – Dimensions of the pitch to plot.</p></li>
+<li><p><strong>marking_colour</strong> (<em>str</em>) – Colour of the pitch markings, default “black”.</p></li>
+<li><p><strong>marking_width</strong> (<em>int</em>) – Width of the pitch markings, default 4.</p></li>
+<li><p><strong>pitch_background</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="plotly_football_pitch.pitch_background.html#plotly_football_pitch.pitch_background.PitchBackground" title="plotly_football_pitch.pitch_background.PitchBackground"><em>PitchBackground</em></a><em>]</em>) – Strategy for plotting a
+background colour to the pitch. The default of None results in a
+transparent background.</p></li>
+<li><p><strong>figure_width_pixels</strong> (<em>int</em>) – Width of the figure, default 800. This
+corresponds to the long axis of the pitch (pitch length).</p></li>
+<li><p><strong>figure_height_pixels</strong> (<em>int</em>) – Height of the figure, default 600. This
+corresponds to the short axis of the pitch (pitch width).</p></li>
+<li><p><strong>orientation</strong> (<a class="reference internal" href="#plotly_football_pitch.PitchOrientation" title="plotly_football_pitch.PitchOrientation"><em>PitchOrientation</em></a>) – Orientation of the pitch, defaults to
+a horizontal pitch.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>plotly.graph_objects.Figure</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="readme.html" class="btn btn-neutral float-left" title="README" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="plotly_football_pitch.pitch_background.html" class="btn btn-neutral float-right" title="plotly_football_pitch.pitch_background module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Andrew Davies.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
