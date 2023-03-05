@@ -109,7 +109,9 @@ class PitchOrientation(Enum):
             keys_to_switch (Optional[list[tuple[str, str]]]): Pairs for keys in
                 `coordinate_data` to swap for a vertically oriented pitch.
                 Defaults to [('x', 'y')], which will work for plotting lines
-                and scatter points.
+                and scatter points. Only keys present in some tuple will be
+                included in the output, therefore no additional key-value pairs
+                should be included in `coordinate_data`.
 
         Returns:
             dict: Dictionary with coordinate data whose axes have been switched
