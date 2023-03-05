@@ -1,6 +1,6 @@
 [project]
 name = "plotly_football_pitch"
-version = "0.0.2"
+version = "0.0.3"
 description = "Package to allow creation of football pitch charts using plotly"
 readme = "README.md"
 requires-python = ">=3.8"

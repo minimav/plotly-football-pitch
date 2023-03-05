@@ -1,15 +1,19 @@
-"""Configuration for the dimensions of a football pitch to plot."""
+"""Configuration for the dimensions/orientation of a football pitch to plot."""
 from dataclasses import dataclass
+from enum import Enum
+from typing import List, Optional, Tuple
 
 
 @dataclass
 class PitchDimensions:
-    """Dimensions for a horizontal football pitch plot.
+    """Dimensions for a football pitch plot.
 
     All units are in metres. Length refers to the longer pitch dimension, which
-    will be the plot's x-axis. Width refers to the shorter pitch dimension,
-    which will be the plot's y-axis. The origin is the bottom left hand corner
-    of the pitch.
+    for a horizontal pitch will be the plot's x-axis. Width refers to the
+    shorter pitch dimension, which for a horizontal pitch will be the plot's
+    y-axis. The axes will be reversed for a vertical pitch.
+
+    The origin is the bottom left hand corner of the pitch.
 
     """
 
@@ -79,3 +83,48 @@ class PitchDimensions:
     def centre_circle_radius_metres(self):
         """Radius of the centre circle in metres."""
         return self.pitch_length_metres / 10
+
+
+class PitchOrientation(Enum):
+    """Orientation of a pitch.
+
+    Horizontal means that the plot's x-axis will represent the longer dimension
+    of the pitch, and the plot's y-axis will represent the shorter dimension of
+    the pitch. The axes are reversed for a vertically oriented pitch.
+    """
+
+    HORIZONTAL = 0
+    VERTICAL = 1
+
+    def switch_axes_if_required(
+        self,
+        coordinate_data: dict,
+        keys_to_switch: Optional[List[Tuple[str, str]]] = None,
+    ) -> dict:
+        """Switch axes of data for vertically oriented pitches.
+
+        Args:
+            coordinate_data (dict): Data to show on the plot. Keys will refer
+                to plot axes e.g. 'x', 'y', 'x0' or 'y1'.
+            keys_to_switch (Optional[list[tuple[str, str]]]): Pairs for keys in
+                `coordinate_data` to swap for a vertically oriented pitch.
+                Defaults to [('x', 'y')], which will work for plotting lines
+                and scatter points. Only keys present in some tuple will be
+                included in the output, therefore no additional key-value pairs
+                should be included in `coordinate_data`.
+
+        Returns:
+            dict: Dictionary with coordinate data whose axes have been switched
+                for a vertically oriented pitch.
+        """
+        if keys_to_switch is None:
+            keys_to_switch = [("x", "y")]
+
+        if self == PitchOrientation.HORIZONTAL:
+            return coordinate_data
+        else:
+            switched_coordinate_data = {}
+            for key_1, key_2 in keys_to_switch:
+                switched_coordinate_data[key_1] = coordinate_data[key_2]
+                switched_coordinate_data[key_2] = coordinate_data[key_1]
+            return switched_coordinate_data
